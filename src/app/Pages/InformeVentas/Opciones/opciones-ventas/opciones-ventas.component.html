@@ -1,1 +1,66 @@
-<p>opciones-ventas works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="titulo">Elija La Opcion a la que desea Navegar:</h3>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-ventas/informe-general-venta'">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Informe General</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-ventas/ventas-totales'">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <span>Ventas Totales</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-ventas/ventas-mabe'">
+                            <i class="fa-solid fa-m"></i>
+                            <span>Ventas De Mabe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-ventas/ventas-challenger'">
+                            <i class="fa-solid fa-c"></i>
+                            <span>Ventas De Challenger</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-ventas/ventas-lg'">
+                            <i class="fa-solid fa-l"></i>
+                            <span>Ventas De LG</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

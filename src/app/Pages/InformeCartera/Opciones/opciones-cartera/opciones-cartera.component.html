@@ -1,1 +1,78 @@
-<p>opciones-cartera works!</p>
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="titulo">Elija La Opcion a la que desea Navegar:</h3>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/informe-general-cartera'">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Informe General</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/ventas-contado'">
+                            <i class="fa-solid fa-money-bills"></i>
+                            <span>Ventas Contado</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/adelantos'">
+                            <i class="fa-solid fa-piggy-bank"></i>
+                            <span>Adelantos</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/pagos-cartera'">
+                            <i class="fa-solid fa-receipt"></i>
+                            <span>Pagos De Cartera</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/intereses'">
+                            <i class="fa-solid fa-wallet"></i>
+                            <span>Intereses</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-cartera/crecimiento-cartera'">
+                            <i class="fa-solid fa-chart-pie"></i>
+                            <span>Crecimiento Cartera</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

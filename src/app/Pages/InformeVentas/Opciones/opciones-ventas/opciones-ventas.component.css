@@ -1,0 +1,191 @@
+.caja {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+    height: auto;
+    background: #fff;
+}
+
+.container{
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 40px;
+    box-shadow: 5px 2px 15px #707274, -14px -9px 20px 5px #ffffff;
+}
+
+.titulo{
+    margin-top: 30px;
+}
+
+
+.options {
+    display: flex;
+    list-style: none;
+
+}
+
+.option {
+    margin: 0 22px;
+    position: relative;
+    border-radius: 50%;
+}
+
+.option a {
+    position: relative;
+    text-decoration: none;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: -300px;
+    width: 100px;
+    height: 80px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: .3s;
+    background: rgba(229, 229, 229, 0.816);
+    animation: fadein 0.4s linear;
+}
+
+.option a:hover {
+    width: 130px;
+    height: 120px;
+    color: #ff0000;
+    background: #fff;
+    padding: 20px;
+    cursor: pointer;
+    animation: fadein 0.4s linear;
+    box-shadow: 5px 3px 8px #6c757d, -1px -1px 5px 2px #6c757d;
+}
+
+.options {
+    /* color: #811919; */
+    font-size: 50px;
+}
+
+/* .option a:hover .fas{
+        padding: 50px;
+    } */
+
+.option a .fas {
+    font-size: 50px;
+    color: #fff;
+    transition: .1s;
+}
+
+.option a span {
+    position: absolute;
+    color: #fff;
+    background: #000;
+    font-family: 'Rubik';
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 200;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.option a:hover span {
+    top: 100px;
+    visibility: visible;
+    opacity: 1;
+    box-shadow: 0px 2px 5px rgbs(0, 0, 0, .4);
+}
+
+span {
+    font-size: 20px;
+}
+
+
+.btnAdminGeneral{
+    text-decoration: none;
+    font-size: 20px;
+    color: #960010;
+}
+
+
+#cerrar {
+   
+    cursor: pointer;
+}
+
+/* clases de los vinculos (colores de las rutas) */
+.close {
+    color: #811919;
+    font-size: 50px;
+}
+
+.session {
+    color: #811919;
+}
+
+
+/* Tablet */
+
+@media_table (max-width:1000px) {
+    .caja {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 0 40px;
+        align-items: center;
+        min-height: 550px;
+        height: auto;
+        background: #fff;
+    }
+
+    .options {
+        display: flex;
+        list-style: none;
+         /* padding: 0; 
+         margin: 0 0 0 200px; */
+    }
+
+    .option a {
+        width: 80px;
+        height: 60px;
+    }
+
+    .option a:hover {
+        width: 110px;
+        height: 90px;
+        color: #ff0000;
+        background: #fff;
+        padding: 30px;
+    }
+
+
+} 
+
+
+/* Movil */
+
+@media (max-width: 767px) {
+    .options {
+        /* Eliminamos el margen para que los elementos ocupen toda la fila */
+        margin: 0;
+    }
+
+    .caja {
+
+        margin-top: 20px;
+    }
+
+    .container{
+        margin-bottom: 20px;
+    }
+    
+
+    /* Utilizamos la clase col-6 para que se muestren en 2 columnas por fila */
+    .col-sm-6 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}

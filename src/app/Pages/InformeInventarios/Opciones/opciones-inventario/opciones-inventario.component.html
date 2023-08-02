@@ -1,1 +1,67 @@
-<p>opciones-inventario works!</p>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 class="titulo">Elija La Opcion a la que desea Navegar:</h3>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-inventario/informe-general-inventario'">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Informe General</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-inventario/informe-total'">
+                            <i class="fa-solid fa-dollar-sign"></i>
+                            <span>Informe Inventario Total</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-inventario/informe-mabe'">
+                            <i class="fa-solid fa-m"></i>
+                            <span>Informe Inventario De Mabe</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-inventario/informe-challenger'">
+                            <i class="fa-solid fa-c"></i>
+                            <span>Informe Inventario De Challenger</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-2 col-sm-6">
+            <div class="caja">
+                <ul class="options">
+                    <li class="option">
+                        <a class="session" [routerLink]="'/dashboard-inventario/informe-lg'">
+                            <i class="fa-solid fa-l"></i>
+                            <span>Informe Inventario De LG</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
