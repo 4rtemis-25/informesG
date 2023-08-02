@@ -1,0 +1,16 @@
+
+
+.card{
+    margin-top: 40px;
+    border-radius: 15px;
+    border-color: #960010;
+    border-width: 2px;
+    margin-left: 50px;
+    margin-top: -150px;
+    background: #dfe2e5;
+    box-shadow: 5px 5px 5px #707274, -14px 5px 5px 5px #ffffff;
+}
+
+.card-img-top{
+    width: 70%;
+}

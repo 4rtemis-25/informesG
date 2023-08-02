@@ -1,0 +1,26 @@
+.navbar {
+    background-color: dark;
+    height: 100px;
+    background: #dfe2e5;
+    box-shadow: 5px 5px 5px #707274, -14px 5px 5px 5px #ffffff;
+  }
+  
+  .navbar-nav {
+    display: flex;
+  }
+
+  .icon{
+    size: 20px;
+    color: #960010;
+    width: 100px;
+    cursor: pointer;
+  }
+
+  img{
+    padding: 20px;
+  }
+
+  .dropdown-item:hover{
+    background-color: #960010;
+  }
+
