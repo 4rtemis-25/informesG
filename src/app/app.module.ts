@@ -11,6 +11,8 @@ import { MensajeComponent } from './Pages/Inicio/mensaje/mensaje.component';
 import { DashboardInicioComponent } from './Pages/Inicio/dashboard-inicio/dashboard-inicio.component';
 import { NavbarComponent } from './Pages/Navbar/navbar/navbar.component';
 import { SidebarComponent } from './Pages/Sidebar/sidebar/sidebar.component';
+import { CrearUsuarioComponent } from './Pages/Usuarios/crear-usuario/crear-usuario.component';
+import { DashboardUsuarioComponent } from './Pages/Usuarios/dashboard-usuario/dashboard-usuario.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { SidebarComponent } from './Pages/Sidebar/sidebar/sidebar.component';
     MensajeComponent,
     DashboardInicioComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    CrearUsuarioComponent,
+    DashboardUsuarioComponent
   ],
   imports: [
     BrowserModule,
