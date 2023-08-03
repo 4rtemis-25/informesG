@@ -38,6 +38,9 @@ import { DashboardOpcionesInventarioComponent } from './Pages/InformeInventarios
 import { OpcionesInventarioComponent } from './Pages/InformeInventarios/Opciones/opciones-inventario/opciones-inventario.component';
 import { DashboardOpcionesVentasComponent } from './Pages/InformeVentas/Opciones/dashboard-opciones-ventas/dashboard-opciones-ventas.component';
 import { OpcionesVentasComponent } from './Pages/InformeVentas/Opciones/opciones-ventas/opciones-ventas.component';
+import { RolesDirective } from './Directivas/roles.directive';
+
+
 
 @NgModule({
   declarations: [
@@ -73,7 +76,8 @@ import { OpcionesVentasComponent } from './Pages/InformeVentas/Opciones/opciones
     DashboardOpcionesInventarioComponent,
     OpcionesInventarioComponent,
     DashboardOpcionesVentasComponent,
-    OpcionesVentasComponent
+    OpcionesVentasComponent,
+    RolesDirective
   ],
   imports: [
     BrowserModule,

@@ -10,7 +10,7 @@
                       </div>
                       <div class="mb-3">
                         <label class="form-label">Contraseña</label>
-                        <input [(ngModel)] = "loginData.password" type="password" class="form-control text-center" placeholder="Ingrese su Contraseña">
+                        <input [(ngModel)] = "loginData.password" type="password" class="form-control text-center" placeholder="Ingrese su Contraseña" (keyup.enter)="inicioSesion()">
                       </div>
                   <a (click)= " inicioSesion()" class="btn btn-danger">Ingresar</a>
                 </div>

@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginServiceService } from 'src/app/Services/Login/login-service.service';
+import { UsuarioService } from 'src/app/Services/Usuario/usuario.service';
 import { Login } from 'src/app/Types/Login';
+import { Rol } from 'src/app/Types/Roles';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -9,14 +11,20 @@ import Swal from 'sweetalert2';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit{
 
   loginData: Login = {
     correo: '',
     password: ''
   }
 
-  constructor(private router:Router, private loginService:LoginServiceService){}
+  roles: string[] = []
+
+  constructor(private router:Router, private loginService:LoginServiceService, private usuarioService:UsuarioService){}
+
+  ngOnInit(): void {
+    this.traerRoles()
+  }
 
   public inicioSesion(){
     if(this.loginData.correo.trim() == '' || this.loginData.correo.trim() == null){
@@ -29,9 +37,10 @@ export class LoginComponent {
     }
     this.loginService.logueo(this.loginData).subscribe(
       (data:any) => {
+        this.loginService.setUpdate(data.is_update)
         this.loginService.loginUser(data.correo)
-        this.loginService.loginRol(data.roles.find((rol:any) => rol.nombreRol == 'ADMINISTRADOR').nombreRol)
-        console.log(data)
+        this.loginService.loginRol(data.roles.find((r:any)=> this.roles.includes(r.nombreRol)).nombreRol)
+        
         Swal.fire('Felicidades', 'Inicio de Sesion Exitoso', 'success')
         this.router.navigate(['/inicio'])
       },
@@ -49,6 +58,20 @@ export class LoginComponent {
 
   public logout(){
     this.loginService.logout()
+  }
+
+  public traerRoles(){
+    this.usuarioService.listarRoles().subscribe(
+      (data:any) => {
+        data.forEach((r:any) => {
+          this.roles.push(r.nombreRol)
+        });
+      },
+      (error) => {
+        console.log(error);
+        Swal.fire('Error','Error al cargar los roles')
+      }
+    )
   }
 
 }

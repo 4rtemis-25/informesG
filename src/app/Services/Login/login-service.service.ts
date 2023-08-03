@@ -9,6 +9,8 @@ import baseUrl from 'src/app/Utils/Helper';
 })
 export class LoginServiceService {
 
+  isUpdate: boolean = false
+
   constructor(private http:HttpClient, private router:Router) { }
 
   public logueo(LoginData:Login){
@@ -19,8 +21,10 @@ export class LoginServiceService {
     localStorage.setItem('correo', correo)
   }
 
-  public loginRol(rol:string){
-    localStorage.setItem('rol', rol)
+  public loginRol(rol:string | undefined){
+    if(rol != null || rol != undefined){
+      localStorage.setItem('rol', rol)
+    }
   }
 
 
@@ -42,4 +46,18 @@ export class LoginServiceService {
   public getCorreo(){
     return localStorage.getItem('correo')
   }
+
+  public setUpdate(isUpdate:boolean){
+    this.isUpdate = isUpdate
+  }
+
+  public getUpdate(){
+    return this.isUpdate
+  }
+
+  public usuarioPorCorreo(correo:string){
+    return this.http.get(`${baseUrl}/usuarios/listarUsuario/${correo}`)
+  }
+
+
 }
