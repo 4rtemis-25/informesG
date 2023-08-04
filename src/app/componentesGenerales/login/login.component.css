@@ -1,4 +1,24 @@
 .card{
     border-radius: 15px;
-    margin-top: 20%;
+    margin-top: -200px;
+}
+
+.btn-danger{
+    background-color: #960010;
+    border: none;
+    color: white;
+    padding: 15px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-danger:hover{
+    background-color: #c50e0e;
+}
+
+img{
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
 }

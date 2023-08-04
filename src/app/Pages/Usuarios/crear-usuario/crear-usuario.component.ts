@@ -4,6 +4,7 @@ import { LoginServiceService } from 'src/app/Services/Login/login-service.servic
 import { UsuarioService } from 'src/app/Services/Usuario/usuario.service';
 import { Rol } from 'src/app/Types/Roles';
 import { Usuario } from 'src/app/Types/Usuario';
+import anime from 'animejs/lib/anime.es.js';
 import Swal from 'sweetalert2';
 
 @Component({
@@ -35,6 +36,12 @@ export class CrearUsuarioComponent implements OnInit {
         Swal.fire('Error','Error al cargar los roles')
       }
     )
+
+    anime({
+      targets: '.card',
+      translateY: -100,
+      duration: 2000
+    });
   }
 
   validarUsuario(){

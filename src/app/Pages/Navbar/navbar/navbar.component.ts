@@ -10,6 +10,8 @@ export class NavbarComponent {
 
   constructor(private loginService:LoginServiceService){}
 
+  rolesArray: string[] = ['ADMINISTRACION', 'CARTERA', 'VENTAS']
+
   logout(){
     this.loginService.logout()
   }

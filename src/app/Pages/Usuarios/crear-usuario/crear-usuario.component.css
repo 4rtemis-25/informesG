@@ -1,10 +1,9 @@
 
 .card{
-    margin-top: 40px;
+    margin-top: 150px;
     border-radius: 15px;
     border-color: #960010;
     border-width: 2px;
-    margin-left: 50px;
     margin-bottom: 50px;
     background: #dfe2e5;
     box-shadow: 5px 5px 5px #707274, -14px 5px 5px 5px #ffffff;
@@ -65,4 +64,10 @@
 
 .btn-guardar:hover{
     background: #D60303 ;
+}
+
+@media (max-width: 576px) {
+    .btn-guardar{
+        width: auto;
+    }
 }

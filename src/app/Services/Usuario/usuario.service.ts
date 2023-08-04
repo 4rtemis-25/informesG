@@ -4,13 +4,14 @@ import { newContrasena } from 'src/app/Types/NuevaContraseña';
 import { Rol } from 'src/app/Types/Roles';
 import { Usuario } from 'src/app/Types/Usuario';
 import baseUrl from 'src/app/Utils/Helper';
+import { LoginServiceService } from '../Login/login-service.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuarioService {
 
-  constructor(private http:HttpClient) { }
+  constructor(private http:HttpClient, private loginService:LoginServiceService) { }
 
   public listarRoles(){
     return this.http.get(`${baseUrl}/usuarios/listarRoles`)
@@ -26,6 +27,11 @@ export class UsuarioService {
 
   public contraseñaUpdate(newContrasena:newContrasena){
     return this.http.put(`${baseUrl}/usuarios/Update`, newContrasena)
+  }
+
+  public getRoles(){
+    var roles: string | null = localStorage.getItem("rol")
+    return  roles;
   }
 
 

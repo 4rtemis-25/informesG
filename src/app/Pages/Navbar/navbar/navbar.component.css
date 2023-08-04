@@ -1,6 +1,5 @@
 .navbar {
     background-color: dark;
-    height: 100px;
     background: #dfe2e5;
     box-shadow: 5px 5px 5px #707274, -14px 5px 5px 5px #ffffff;
   }
@@ -17,10 +16,17 @@
   }
 
   img{
-    padding: 20px;
-  }
 
+  }
+  
   .dropdown-item:hover{
     background-color: #960010;
+    color: white;
   }
+
+  @media (max-width: 576px) {
+    img{
+      width: 50%;
+    }
+}
 

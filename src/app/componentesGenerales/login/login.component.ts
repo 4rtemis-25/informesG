@@ -5,6 +5,7 @@ import { UsuarioService } from 'src/app/Services/Usuario/usuario.service';
 import { Login } from 'src/app/Types/Login';
 import { Rol } from 'src/app/Types/Roles';
 import Swal from 'sweetalert2';
+import anime from 'animejs/lib/anime.es.js';
 
 @Component({
   selector: 'app-login',
@@ -24,6 +25,12 @@ export class LoginComponent implements OnInit{
 
   ngOnInit(): void {
     this.traerRoles()
+
+    anime({
+      targets: '.card',
+      translateY: 250,
+      duration: 2000
+    });
   }
 
   public inicioSesion(){

@@ -38,7 +38,7 @@ import { DashboardOpcionesInventarioComponent } from './Pages/InformeInventarios
 import { OpcionesInventarioComponent } from './Pages/InformeInventarios/Opciones/opciones-inventario/opciones-inventario.component';
 import { DashboardOpcionesVentasComponent } from './Pages/InformeVentas/Opciones/dashboard-opciones-ventas/dashboard-opciones-ventas.component';
 import { OpcionesVentasComponent } from './Pages/InformeVentas/Opciones/opciones-ventas/opciones-ventas.component';
-import { RolesDirective } from './Directivas/roles.directive';
+import { RolDirective } from './Directivas/Roles/rol.directive';
 
 
 
@@ -77,7 +77,7 @@ import { RolesDirective } from './Directivas/roles.directive';
     OpcionesInventarioComponent,
     DashboardOpcionesVentasComponent,
     OpcionesVentasComponent,
-    RolesDirective
+    RolDirective
   ],
   imports: [
     BrowserModule,
