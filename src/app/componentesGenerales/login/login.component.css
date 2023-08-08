@@ -17,6 +17,10 @@
     background-color: #c50e0e;
 }
 
+input{
+    border: 1px solid black;
+}
+
 img{
     justify-content: center;
     align-items: center;
